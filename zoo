@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+
+public class Zoo {
+    private final String name;
+    private final String location;
+    private final ArrayList<Animal>
+            animals = new ArrayList<>();
+    private final ArrayList<Zookeeper> zookeepers = new ArrayList<>();
+
+    public Zoo(String name, String location) {
+        this.name = name;
+        this.location = location;
+    }
+
+    public void addAnimal(Animal animal) {
+        animals.add(animal);
+    }
+
+    public void addZookeeper(Zookeeper zookeeper) {
+        zookeepers.add(zookeeper);
+    }
+
+    public void displayZooInfo() {
+        System.out.println("Zoo: " + name + ", Location: " + location);
+        System.out.println("Animals:");
+        for (Animal animal : animals) {
+            animal.displayInfo();
+        }
+        System.out.println("Zookeepers:");
+        for (Zookeeper zookeeper : zookeepers) {
+            zookeeper.displayInfo();
+        }
+    }
+}
