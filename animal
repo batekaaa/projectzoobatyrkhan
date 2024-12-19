@@ -1,0 +1,25 @@
+public class Animal {
+    private final String name;
+    private final String species;
+    private final String habitat;
+    private final int age;
+
+    public Animal(String name, String species, int age, String habitat) {
+        this.name = name;
+        this.species = species;
+        this.age = age;
+        this.habitat = habitat;
+    }
+
+    public void displayInfo() {
+        System.out.println("Animal: " + name + ", Species: " + species + ", Age: " + age + ", Habitat: " + habitat);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Animal animal = (Animal) obj;
+        return name.equals(animal.name);
+    }
+}
