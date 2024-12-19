@@ -1,0 +1,27 @@
+public class Main {
+    public static void main(String[] args) {
+        // Создаем экземпляры животных
+        Animal tiger = new Animal("Tiger", "Panthera tigres", 5, "Jungle");
+        Animal elephant = new Animal("Elephant", "Elephants maximus", 10, "Savannah");
+
+        // Создаем экземпляры дрессировщиков
+        Zookeeper shah= new Zookeeper("shah", 30, "Big Cats");
+        Zookeeper antony = new Zookeeper("antony", 28, "Elephants");
+
+        // Создаем экземпляр зоопарка
+        Zoo myZoo = new Zoo("Wildlife Park", "New York");
+
+        // Добавляем животных и дрессировщиков в зоопарк
+        myZoo.addAnimal(tiger);
+        myZoo.addAnimal(elephant);
+        myZoo.addZookeeper(shah);
+        myZoo.addZookeeper(antony);
+
+        // Выводим информацию о зоопарке
+        myZoo.displayZooInfo();
+
+        // Сравниваем животных и дрессировщиков
+        System.out.println("Is the tiger the same as the elephant? " + tiger.equals(elephant));
+        System.out.println("Is shah the same as antony? " + shah.equals(antony));
+    }
+}
