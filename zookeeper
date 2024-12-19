@@ -1,0 +1,23 @@
+public class Zookeeper {
+    private final String name;
+    private final String specialty;
+    private final int age;
+
+    public Zookeeper(String name, int age, String specialty) {
+        this.name = name;
+        this.age = age;
+        this.specialty = specialty;
+    }
+
+    public void displayInfo() {
+        System.out.println("Zookeeper: " + name + ", Age: " + age + ", Specialty: " + specialty);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Zookeeper zookeeper = (Zookeeper) obj;
+        return name.equals(zookeeper.name);
+    }
+}
